@@ -1,0 +1,216 @@
+2021-11-30 17:00:47	INFO	::casa	
+2021-11-30 17:00:49	INFO	::casa	CASA Version 6.1.2.7
+2021-11-30 17:00:49	INFO	::casa	
+2021-11-30 17:00:49	INFO	::casa	Found an existing telemetry logfile: /Users/emma/.casa/casastats-6.1.2.7-2101811113dd1ee2fe-20211130-153013.log
+2021-11-30 17:00:49	INFO	::casa	Telemetry log file: /Users/emma/.casa/casastats-6.1.2.7-2101811113dd1ee2fe-20211130-153013.log
+2021-11-30 17:00:49	INFO	::casa	Checking telemetry submission interval
+2021-11-30 17:00:49	INFO	::casa	Telemetry submit interval not reached. Not submitting data.
+2021-11-30 17:00:49	INFO	::casa	Next telemetry data submission in: 6 days, 22:29:24.460730
+2021-11-30 17:00:50	INFO	::casa	
+2021-11-30 17:01:01	INFO	imsubimage::::casa	##########################################
+2021-11-30 17:01:01	INFO	imsubimage::::casa	##### Begin Task: imsubimage         #####
+2021-11-30 17:01:01	INFO	imsubimage::::casa	imsubimage( imagename='/Volumes/TARDIS/Work/askap/fullfields/image.i.SB9351.cont.taylor.0.restored.fits', outfile='EMU_im_temp', box='', region='centerbox[[20h26m45s,-55d22m28s], [4arcmin, 4arcmin]]', chans='', stokes='', mask='', dropdeg=True, overwrite=True, verbose=True, stretch=False, keepaxes=[] )
+2021-11-30 17:01:01	INFO	imsubimage::FITSCoordinateUtil::fromFITSHeader	Neither SPECSYS nor VELREF keyword given, spectral reference frame not defined ...
+2021-11-30 17:01:01	INFO	imsubimage::AsciiRegionFileParser::_parse	Combined 1 image regions (which excludes any annotation regions)
+2021-11-30 17:01:01	INFO	imsubimage::AsciiRegionFileParser::_parse	The specified region will select all pixels that are included in the region. Full pixels will be included even when they are only partially covered by the region(s).
+2021-11-30 17:01:01	INFO	imsubimage::CasacRegionManager::fromBCS	Region read from text string centerbox[[20h26m45s,-55d22m28s], [4arcmin, 4arcmin]]
+2021-11-30 17:01:01	INFO	imsubimage::ImageRegion::fromRecord	Selected bounding box : 
+2021-11-30 17:01:01	INFO	imsubimage::ImageRegion::fromRecord+	    [11865, 7901, 0, 0] to [11986, 8021, 0, 0]  (20:26:59.337, -55.24.26.621, 943490740.7Hz, I to 20:26:30.617, -55.20.29.349, 943490740.7Hz, I)
+2021-11-30 17:01:01	INFO	imsubimage::ImageRegion::fromRecord	Creating image 'EMU_im_temp' of shape [122, 121]
+2021-11-30 17:01:01	INFO	imsubimage::ImageMaskAttacher::makeMask	Created mask `mask0'
+2021-11-30 17:01:01	INFO	imsubimage::::casa	Result imsubimage: True
+2021-11-30 17:01:01	INFO	imsubimage::::casa	Task imsubimage complete. Start time: 2021-11-30 17:01:01.004263 End time: 2021-11-30 17:01:01.325654
+2021-11-30 17:01:01	INFO	imsubimage::::casa	##### End Task: imsubimage           #####
+2021-11-30 17:01:01	INFO	imsubimage::::casa	##########################################
+2021-11-30 17:01:01	INFO	exportfits::::casa	##########################################
+2021-11-30 17:01:01	INFO	exportfits::::casa	##### Begin Task: exportfits         #####
+2021-11-30 17:01:01	INFO	exportfits::::casa	exportfits( imagename='EMU_im_temp', fitsimage='/Users/emma/Dropbox/Public/EMUZoo/2027-5522_EMU.fits', velocity=False, optical=False, bitpix=-32, minpix=0, maxpix=-1, overwrite=True, dropstokes=False, stokeslast=True, history=True, dropdeg=False )
+2021-11-30 17:01:01	INFO	exportfits::ImageFactory::toFITS	Applying mask of name 'mask0'
+2021-11-30 17:01:01	INFO	exportfits::::casa	Result exportfits: None
+2021-11-30 17:01:01	INFO	exportfits::::casa	Task exportfits complete. Start time: 2021-11-30 17:01:01.338755 End time: 2021-11-30 17:01:01.368870
+2021-11-30 17:01:01	INFO	exportfits::::casa	##### End Task: exportfits           #####
+2021-11-30 17:01:01	INFO	exportfits::::casa	##########################################
+2021-11-30 17:01:01	INFO	imsubimage::::casa	##########################################
+2021-11-30 17:01:01	INFO	imsubimage::::casa	##### Begin Task: imsubimage         #####
+2021-11-30 17:01:01	INFO	imsubimage::::casa	imsubimage( imagename='/Volumes/TARDIS/Work/askap/fullfields/image.i.SB9351.cont.taylor.0.restored.fits', outfile='EMU_im_temp', box='', region='centerbox[[20h27m14s,-55d18m46s], [4arcmin, 4arcmin]]', chans='', stokes='', mask='', dropdeg=True, overwrite=True, verbose=True, stretch=False, keepaxes=[] )
+2021-11-30 17:01:01	INFO	imsubimage::FITSCoordinateUtil::fromFITSHeader	Neither SPECSYS nor VELREF keyword given, spectral reference frame not defined ...
+2021-11-30 17:01:01	INFO	imsubimage::AsciiRegionFileParser::_parse	Combined 1 image regions (which excludes any annotation regions)
+2021-11-30 17:01:01	INFO	imsubimage::AsciiRegionFileParser::_parse	The specified region will select all pixels that are included in the region. Full pixels will be included even when they are only partially covered by the region(s).
+2021-11-30 17:01:01	INFO	imsubimage::CasacRegionManager::fromBCS	Region read from text string centerbox[[20h27m14s,-55d18m46s], [4arcmin, 4arcmin]]
+2021-11-30 17:01:01	INFO	imsubimage::ImageRegion::fromRecord	Selected bounding box : 
+2021-11-30 17:01:01	INFO	imsubimage::ImageRegion::fromRecord+	    [11740, 8010, 0, 0] to [11861, 8131, 0, 0]  (20:27:28.327, -55.20.45.048, 943490740.7Hz, I to 20:26:59.600, -55.16.46.201, 943490740.7Hz, I)
+2021-11-30 17:01:01	INFO	imsubimage::ImageRegion::fromRecord	Creating image 'EMU_im_temp' of shape [122, 122]
+2021-11-30 17:01:01	INFO	imsubimage::ImageMaskAttacher::makeMask	Created mask `mask0'
+2021-11-30 17:01:01	INFO	imsubimage::::casa	Result imsubimage: True
+2021-11-30 17:01:01	INFO	imsubimage::::casa	Task imsubimage complete. Start time: 2021-11-30 17:01:01.392890 End time: 2021-11-30 17:01:01.479592
+2021-11-30 17:01:01	INFO	imsubimage::::casa	##### End Task: imsubimage           #####
+2021-11-30 17:01:01	INFO	imsubimage::::casa	##########################################
+2021-11-30 17:01:01	INFO	exportfits::::casa	##########################################
+2021-11-30 17:01:01	INFO	exportfits::::casa	##### Begin Task: exportfits         #####
+2021-11-30 17:01:01	INFO	exportfits::::casa	exportfits( imagename='EMU_im_temp', fitsimage='/Users/emma/Dropbox/Public/EMUZoo/2027-5519_EMU.fits', velocity=False, optical=False, bitpix=-32, minpix=0, maxpix=-1, overwrite=True, dropstokes=False, stokeslast=True, history=True, dropdeg=False )
+2021-11-30 17:01:01	INFO	exportfits::ImageFactory::toFITS	Applying mask of name 'mask0'
+2021-11-30 17:01:01	INFO	exportfits::::casa	Result exportfits: None
+2021-11-30 17:01:01	INFO	exportfits::::casa	Task exportfits complete. Start time: 2021-11-30 17:01:01.483024 End time: 2021-11-30 17:01:01.495086
+2021-11-30 17:01:01	INFO	exportfits::::casa	##### End Task: exportfits           #####
+2021-11-30 17:01:01	INFO	exportfits::::casa	##########################################
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##########################################
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##### Begin Task: imsubimage         #####
+2021-11-30 17:01:02	INFO	imsubimage::::casa	imsubimage( imagename='/Volumes/TARDIS/Work/askap/fullfields/image.i.SB9351.cont.taylor.0.restored.fits', outfile='EMU_im_temp', box='', region='centerbox[[20h22m59s,-54d05m14s], [4arcmin, 4arcmin]]', chans='', stokes='', mask='', dropdeg=True, overwrite=True, verbose=True, stretch=False, keepaxes=[] )
+2021-11-30 17:01:02	INFO	imsubimage::FITSCoordinateUtil::fromFITSHeader	Neither SPECSYS nor VELREF keyword given, spectral reference frame not defined ...
+2021-11-30 17:01:02	INFO	imsubimage::AsciiRegionFileParser::_parse	Combined 1 image regions (which excludes any annotation regions)
+2021-11-30 17:01:02	INFO	imsubimage::AsciiRegionFileParser::_parse	The specified region will select all pixels that are included in the region. Full pixels will be included even when they are only partially covered by the region(s).
+2021-11-30 17:01:02	INFO	imsubimage::CasacRegionManager::fromBCS	Region read from text string centerbox[[20h22m59s,-54d05m14s], [4arcmin, 4arcmin]]
+2021-11-30 17:01:02	INFO	imsubimage::ImageRegion::fromRecord	Selected bounding box : 
+2021-11-30 17:01:02	INFO	imsubimage::ImageRegion::fromRecord+	    [12833, 10220, 0, 0] to [12952, 10339, 0, 0]  (20:23:12.575, -54.07.14.195, 943490740.7Hz, I to 20:22:45.574, -54.03.15.288, 943490740.7Hz, I)
+2021-11-30 17:01:02	INFO	imsubimage::ImageRegion::fromRecord	Creating image 'EMU_im_temp' of shape [120, 120]
+2021-11-30 17:01:02	INFO	imsubimage::ImageMaskAttacher::makeMask	Created mask `mask0'
+2021-11-30 17:01:02	INFO	imsubimage::::casa	Result imsubimage: True
+2021-11-30 17:01:02	INFO	imsubimage::::casa	Task imsubimage complete. Start time: 2021-11-30 17:01:01.510679 End time: 2021-11-30 17:01:01.695368
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##### End Task: imsubimage           #####
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##########################################
+2021-11-30 17:01:02	INFO	exportfits::::casa	##########################################
+2021-11-30 17:01:02	INFO	exportfits::::casa	##### Begin Task: exportfits         #####
+2021-11-30 17:01:02	INFO	exportfits::::casa	exportfits( imagename='EMU_im_temp', fitsimage='/Users/emma/Dropbox/Public/EMUZoo/2023-5405_EMU.fits', velocity=False, optical=False, bitpix=-32, minpix=0, maxpix=-1, overwrite=True, dropstokes=False, stokeslast=True, history=True, dropdeg=False )
+2021-11-30 17:01:02	INFO	exportfits::ImageFactory::toFITS	Applying mask of name 'mask0'
+2021-11-30 17:01:02	INFO	exportfits::::casa	Result exportfits: None
+2021-11-30 17:01:02	INFO	exportfits::::casa	Task exportfits complete. Start time: 2021-11-30 17:01:01.699071 End time: 2021-11-30 17:01:01.715891
+2021-11-30 17:01:02	INFO	exportfits::::casa	##### End Task: exportfits           #####
+2021-11-30 17:01:02	INFO	exportfits::::casa	##########################################
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##########################################
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##### Begin Task: imsubimage         #####
+2021-11-30 17:01:02	INFO	imsubimage::::casa	imsubimage( imagename='/Volumes/TARDIS/Work/askap/fullfields/image.i.SB9351.cont.taylor.0.restored.fits', outfile='EMU_im_temp', box='', region='centerbox[[20h51m20s,-53d44m05s], [4arcmin, 4arcmin]]', chans='', stokes='', mask='', dropdeg=True, overwrite=True, verbose=True, stretch=False, keepaxes=[] )
+2021-11-30 17:01:02	INFO	imsubimage::FITSCoordinateUtil::fromFITSHeader	Neither SPECSYS nor VELREF keyword given, spectral reference frame not defined ...
+2021-11-30 17:01:02	INFO	imsubimage::AsciiRegionFileParser::_parse	Combined 1 image regions (which excludes any annotation regions)
+2021-11-30 17:01:02	INFO	imsubimage::AsciiRegionFileParser::_parse	The specified region will select all pixels that are included in the region. Full pixels will be included even when they are only partially covered by the region(s).
+2021-11-30 17:01:02	INFO	imsubimage::CasacRegionManager::fromBCS	Region read from text string centerbox[[20h51m20s,-53d44m05s], [4arcmin, 4arcmin]]
+2021-11-30 17:01:02	INFO	imsubimage::ImageRegion::fromRecord	Selected bounding box : 
+2021-11-30 17:01:02	INFO	imsubimage::ImageRegion::fromRecord+	    [5301, 10469, 0, 0] to [5431, 10599, 0, 0]  (20:51:36.011, -53.46.01.503, 943490740.7Hz, I to 20:51:03.913, -53.42.08.930, 943490740.7Hz, I)
+2021-11-30 17:01:02	INFO	imsubimage::ImageRegion::fromRecord	Creating image 'EMU_im_temp' of shape [131, 131]
+2021-11-30 17:01:02	INFO	imsubimage::ImageMaskAttacher::makeMask	Created mask `mask0'
+2021-11-30 17:01:02	INFO	imsubimage::::casa	Result imsubimage: True
+2021-11-30 17:01:02	INFO	imsubimage::::casa	Task imsubimage complete. Start time: 2021-11-30 17:01:01.733791 End time: 2021-11-30 17:01:01.873952
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##### End Task: imsubimage           #####
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##########################################
+2021-11-30 17:01:02	INFO	exportfits::::casa	##########################################
+2021-11-30 17:01:02	INFO	exportfits::::casa	##### Begin Task: exportfits         #####
+2021-11-30 17:01:02	INFO	exportfits::::casa	exportfits( imagename='EMU_im_temp', fitsimage='/Users/emma/Dropbox/Public/EMUZoo/2051-5343_EMU.fits', velocity=False, optical=False, bitpix=-32, minpix=0, maxpix=-1, overwrite=True, dropstokes=False, stokeslast=True, history=True, dropdeg=False )
+2021-11-30 17:01:02	INFO	exportfits::ImageFactory::toFITS	Applying mask of name 'mask0'
+2021-11-30 17:01:02	INFO	exportfits::::casa	Result exportfits: None
+2021-11-30 17:01:02	INFO	exportfits::::casa	Task exportfits complete. Start time: 2021-11-30 17:01:01.877185 End time: 2021-11-30 17:01:01.888403
+2021-11-30 17:01:02	INFO	exportfits::::casa	##### End Task: exportfits           #####
+2021-11-30 17:01:02	INFO	exportfits::::casa	##########################################
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##########################################
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##### Begin Task: imsubimage         #####
+2021-11-30 17:01:02	INFO	imsubimage::::casa	imsubimage( imagename='/Volumes/TARDIS/Work/askap/fullfields/image.i.SB9351.cont.taylor.0.restored.fits', outfile='EMU_im_temp', box='', region='centerbox[[20h58m37s,-54d09m29s], [4arcmin, 4arcmin]]', chans='', stokes='', mask='', dropdeg=True, overwrite=True, verbose=True, stretch=False, keepaxes=[] )
+2021-11-30 17:01:02	INFO	imsubimage::FITSCoordinateUtil::fromFITSHeader	Neither SPECSYS nor VELREF keyword given, spectral reference frame not defined ...
+2021-11-30 17:01:02	INFO	imsubimage::AsciiRegionFileParser::_parse	Combined 1 image regions (which excludes any annotation regions)
+2021-11-30 17:01:02	INFO	imsubimage::AsciiRegionFileParser::_parse	The specified region will select all pixels that are included in the region. Full pixels will be included even when they are only partially covered by the region(s).
+2021-11-30 17:01:02	INFO	imsubimage::CasacRegionManager::fromBCS	Region read from text string centerbox[[20h58m37s,-54d09m29s], [4arcmin, 4arcmin]]
+2021-11-30 17:01:02	INFO	imsubimage::ImageRegion::fromRecord	Selected bounding box : 
+2021-11-30 17:01:02	INFO	imsubimage::ImageRegion::fromRecord+	    [3473, 9489, 0, 0] to [3605, 9622, 0, 0]  (20:58:53.950, -54.11.24.388, 943490740.7Hz, I to 20:58:20.257, -54.07.34.254, 943490740.7Hz, I)
+2021-11-30 17:01:02	INFO	imsubimage::ImageRegion::fromRecord	Creating image 'EMU_im_temp' of shape [133, 134]
+2021-11-30 17:01:02	INFO	imsubimage::ImageMaskAttacher::makeMask	Created mask `mask0'
+2021-11-30 17:01:02	INFO	imsubimage::::casa	Result imsubimage: True
+2021-11-30 17:01:02	INFO	imsubimage::::casa	Task imsubimage complete. Start time: 2021-11-30 17:01:01.899213 End time: 2021-11-30 17:01:02.053130
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##### End Task: imsubimage           #####
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##########################################
+2021-11-30 17:01:02	INFO	exportfits::::casa	##########################################
+2021-11-30 17:01:02	INFO	exportfits::::casa	##### Begin Task: exportfits         #####
+2021-11-30 17:01:02	INFO	exportfits::::casa	exportfits( imagename='EMU_im_temp', fitsimage='/Users/emma/Dropbox/Public/EMUZoo/2059-5409_EMU.fits', velocity=False, optical=False, bitpix=-32, minpix=0, maxpix=-1, overwrite=True, dropstokes=False, stokeslast=True, history=True, dropdeg=False )
+2021-11-30 17:01:02	INFO	exportfits::ImageFactory::toFITS	Applying mask of name 'mask0'
+2021-11-30 17:01:02	INFO	exportfits::::casa	Result exportfits: None
+2021-11-30 17:01:02	INFO	exportfits::::casa	Task exportfits complete. Start time: 2021-11-30 17:01:02.057100 End time: 2021-11-30 17:01:02.073399
+2021-11-30 17:01:02	INFO	exportfits::::casa	##### End Task: exportfits           #####
+2021-11-30 17:01:02	INFO	exportfits::::casa	##########################################
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##########################################
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##### Begin Task: imsubimage         #####
+2021-11-30 17:01:02	INFO	imsubimage::::casa	imsubimage( imagename='/Volumes/TARDIS/Work/askap/fullfields/image.i.SB9351.cont.taylor.0.restored.fits', outfile='EMU_im_temp', box='', region='centerbox[[20h53m07s,-55d24m49s], [4arcmin, 4arcmin]]', chans='', stokes='', mask='', dropdeg=True, overwrite=True, verbose=True, stretch=False, keepaxes=[] )
+2021-11-30 17:01:02	INFO	imsubimage::FITSCoordinateUtil::fromFITSHeader	Neither SPECSYS nor VELREF keyword given, spectral reference frame not defined ...
+2021-11-30 17:01:02	INFO	imsubimage::AsciiRegionFileParser::_parse	Combined 1 image regions (which excludes any annotation regions)
+2021-11-30 17:01:02	INFO	imsubimage::AsciiRegionFileParser::_parse	The specified region will select all pixels that are included in the region. Full pixels will be included even when they are only partially covered by the region(s).
+2021-11-30 17:01:02	INFO	imsubimage::CasacRegionManager::fromBCS	Region read from text string centerbox[[20h53m07s,-55d24m49s], [4arcmin, 4arcmin]]
+2021-11-30 17:01:02	INFO	imsubimage::ImageRegion::fromRecord	Selected bounding box : 
+2021-11-30 17:01:02	INFO	imsubimage::ImageRegion::fromRecord+	    [5147, 7418, 0, 0] to [5277, 7549, 0, 0]  (20:53:23.877, -55.26.45.382, 943490740.7Hz, I to 20:52:50.167, -55.22.53.087, 943490740.7Hz, I)
+2021-11-30 17:01:02	INFO	imsubimage::ImageRegion::fromRecord	Creating image 'EMU_im_temp' of shape [131, 132]
+2021-11-30 17:01:02	INFO	imsubimage::ImageMaskAttacher::makeMask	Created mask `mask0'
+2021-11-30 17:01:02	INFO	imsubimage::::casa	Result imsubimage: True
+2021-11-30 17:01:02	INFO	imsubimage::::casa	Task imsubimage complete. Start time: 2021-11-30 17:01:02.084233 End time: 2021-11-30 17:01:02.263367
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##### End Task: imsubimage           #####
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##########################################
+2021-11-30 17:01:02	INFO	exportfits::::casa	##########################################
+2021-11-30 17:01:02	INFO	exportfits::::casa	##### Begin Task: exportfits         #####
+2021-11-30 17:01:02	INFO	exportfits::::casa	exportfits( imagename='EMU_im_temp', fitsimage='/Users/emma/Dropbox/Public/EMUZoo/2053-5525_EMU.fits', velocity=False, optical=False, bitpix=-32, minpix=0, maxpix=-1, overwrite=True, dropstokes=False, stokeslast=True, history=True, dropdeg=False )
+2021-11-30 17:01:02	INFO	exportfits::ImageFactory::toFITS	Applying mask of name 'mask0'
+2021-11-30 17:01:02	INFO	exportfits::::casa	Result exportfits: None
+2021-11-30 17:01:02	INFO	exportfits::::casa	Task exportfits complete. Start time: 2021-11-30 17:01:02.268747 End time: 2021-11-30 17:01:02.280773
+2021-11-30 17:01:02	INFO	exportfits::::casa	##### End Task: exportfits           #####
+2021-11-30 17:01:02	INFO	exportfits::::casa	##########################################
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##########################################
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##### Begin Task: imsubimage         #####
+2021-11-30 17:01:02	INFO	imsubimage::::casa	imsubimage( imagename='/Volumes/TARDIS/Work/askap/fullfields/image.i.SB9351.cont.taylor.0.restored.fits', outfile='EMU_im_temp', box='', region='centerbox[[20h57m18s,-57d40m54s], [4arcmin, 4arcmin]]', chans='', stokes='', mask='', dropdeg=True, overwrite=True, verbose=True, stretch=False, keepaxes=[] )
+2021-11-30 17:01:02	INFO	imsubimage::FITSCoordinateUtil::fromFITSHeader	Neither SPECSYS nor VELREF keyword given, spectral reference frame not defined ...
+2021-11-30 17:01:02	INFO	imsubimage::AsciiRegionFileParser::_parse	Combined 1 image regions (which excludes any annotation regions)
+2021-11-30 17:01:02	INFO	imsubimage::AsciiRegionFileParser::_parse	The specified region will select all pixels that are included in the region. Full pixels will be included even when they are only partially covered by the region(s).
+2021-11-30 17:01:02	INFO	imsubimage::CasacRegionManager::fromBCS	Region read from text string centerbox[[20h57m18s,-57d40m54s], [4arcmin, 4arcmin]]
+2021-11-30 17:01:02	INFO	imsubimage::ImageRegion::fromRecord	Selected bounding box : 
+2021-11-30 17:01:02	INFO	imsubimage::ImageRegion::fromRecord+	    [4588, 3243, 0, 0] to [4720, 3375, 0, 0]  (20:57:36.449, -57.42.48.305, 943490740.7Hz, I to 20:56:59.581, -57.38.59.199, 943490740.7Hz, I)
+2021-11-30 17:01:02	INFO	imsubimage::ImageRegion::fromRecord	Creating image 'EMU_im_temp' of shape [133, 133]
+2021-11-30 17:01:02	INFO	imsubimage::ImageMaskAttacher::makeMask	Created mask `mask0'
+2021-11-30 17:01:02	INFO	imsubimage::::casa	Result imsubimage: True
+2021-11-30 17:01:02	INFO	imsubimage::::casa	Task imsubimage complete. Start time: 2021-11-30 17:01:02.295727 End time: 2021-11-30 17:01:02.455673
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##### End Task: imsubimage           #####
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##########################################
+2021-11-30 17:01:02	INFO	exportfits::::casa	##########################################
+2021-11-30 17:01:02	INFO	exportfits::::casa	##### Begin Task: exportfits         #####
+2021-11-30 17:01:02	INFO	exportfits::::casa	exportfits( imagename='EMU_im_temp', fitsimage='/Users/emma/Dropbox/Public/EMUZoo/2057-5741_EMU.fits', velocity=False, optical=False, bitpix=-32, minpix=0, maxpix=-1, overwrite=True, dropstokes=False, stokeslast=True, history=True, dropdeg=False )
+2021-11-30 17:01:02	INFO	exportfits::ImageFactory::toFITS	Applying mask of name 'mask0'
+2021-11-30 17:01:02	INFO	exportfits::::casa	Result exportfits: None
+2021-11-30 17:01:02	INFO	exportfits::::casa	Task exportfits complete. Start time: 2021-11-30 17:01:02.462230 End time: 2021-11-30 17:01:02.474027
+2021-11-30 17:01:02	INFO	exportfits::::casa	##### End Task: exportfits           #####
+2021-11-30 17:01:02	INFO	exportfits::::casa	##########################################
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##########################################
+2021-11-30 17:01:02	INFO	imsubimage::::casa	##### Begin Task: imsubimage         #####
+2021-11-30 17:01:02	INFO	imsubimage::::casa	imsubimage( imagename='/Volumes/TARDIS/Work/askap/fullfields/image.i.SB9434.cont.taylor.0.restored.fits', outfile='EMU_im_temp', box='', region='centerbox[[21h41m05s,-49d15m54s], [4arcmin, 4arcmin]]', chans='', stokes='', mask='', dropdeg=True, overwrite=True, verbose=True, stretch=False, keepaxes=[] )
+2021-11-30 17:01:02	INFO	imsubimage::FITSCoordinateUtil::fromFITSHeader	Neither SPECSYS nor VELREF keyword given, spectral reference frame not defined ...
+2021-11-30 17:01:03	INFO	imsubimage::AsciiRegionFileParser::_parse	Combined 1 image regions (which excludes any annotation regions)
+2021-11-30 17:01:03	INFO	imsubimage::AsciiRegionFileParser::_parse	The specified region will select all pixels that are included in the region. Full pixels will be included even when they are only partially covered by the region(s).
+2021-11-30 17:01:03	INFO	imsubimage::CasacRegionManager::fromBCS	Region read from text string centerbox[[21h41m05s,-49d15m54s], [4arcmin, 4arcmin]]
+2021-11-30 17:01:03	INFO	imsubimage::ImageRegion::fromRecord	Selected bounding box : 
+2021-11-30 17:01:03	INFO	imsubimage::ImageRegion::fromRecord+	    [5294, 10174, 0, 0] to [5422, 10302, 0, 0]  (21:41:19.157, -49.17.50.352, 943490740.7Hz, I to 21:40:50.885, -49.13.56.916, 943490740.7Hz, I)
+2021-11-30 17:01:03	INFO	imsubimage::ImageRegion::fromRecord	Creating image 'EMU_im_temp' of shape [129, 129]
+2021-11-30 17:01:03	INFO	imsubimage::ImageMaskAttacher::makeMask	Created mask `mask0'
+2021-11-30 17:01:03	INFO	imsubimage::::casa	Result imsubimage: True
+2021-11-30 17:01:03	INFO	imsubimage::::casa	Task imsubimage complete. Start time: 2021-11-30 17:01:02.485356 End time: 2021-11-30 17:01:02.562018
+2021-11-30 17:01:03	INFO	imsubimage::::casa	##### End Task: imsubimage           #####
+2021-11-30 17:01:03	INFO	imsubimage::::casa	##########################################
+2021-11-30 17:01:03	INFO	exportfits::::casa	##########################################
+2021-11-30 17:01:03	INFO	exportfits::::casa	##### Begin Task: exportfits         #####
+2021-11-30 17:01:03	INFO	exportfits::::casa	exportfits( imagename='EMU_im_temp', fitsimage='/Users/emma/Dropbox/Public/EMUZoo/2141-4916_EMU.fits', velocity=False, optical=False, bitpix=-32, minpix=0, maxpix=-1, overwrite=True, dropstokes=False, stokeslast=True, history=True, dropdeg=False )
+2021-11-30 17:01:03	INFO	exportfits::ImageFactory::toFITS	Applying mask of name 'mask0'
+2021-11-30 17:01:03	INFO	exportfits::::casa	Result exportfits: None
+2021-11-30 17:01:03	INFO	exportfits::::casa	Task exportfits complete. Start time: 2021-11-30 17:01:02.568970 End time: 2021-11-30 17:01:02.584208
+2021-11-30 17:01:03	INFO	exportfits::::casa	##### End Task: exportfits           #####
+2021-11-30 17:01:03	INFO	exportfits::::casa	##########################################
+2021-11-30 17:01:03	INFO	imsubimage::::casa	##########################################
+2021-11-30 17:01:03	INFO	imsubimage::::casa	##### Begin Task: imsubimage         #####
+2021-11-30 17:01:03	INFO	imsubimage::::casa	imsubimage( imagename='/Volumes/TARDIS/Work/askap/fullfields/image.i.SB9434.cont.taylor.0.restored.fits', outfile='EMU_im_temp', box='', region='centerbox[[21h47m50s,-50d39m24s], [4arcmin, 4arcmin]]', chans='', stokes='', mask='', dropdeg=True, overwrite=True, verbose=True, stretch=False, keepaxes=[] )
+2021-11-30 17:01:03	INFO	imsubimage::FITSCoordinateUtil::fromFITSHeader	Neither SPECSYS nor VELREF keyword given, spectral reference frame not defined ...
+2021-11-30 17:01:03	INFO	imsubimage::AsciiRegionFileParser::_parse	Combined 1 image regions (which excludes any annotation regions)
+2021-11-30 17:01:03	INFO	imsubimage::AsciiRegionFileParser::_parse	The specified region will select all pixels that are included in the region. Full pixels will be included even when they are only partially covered by the region(s).
+2021-11-30 17:01:03	INFO	imsubimage::CasacRegionManager::fromBCS	Region read from text string centerbox[[21h47m50s,-50d39m24s], [4arcmin, 4arcmin]]
+2021-11-30 17:01:03	INFO	imsubimage::ImageRegion::fromRecord	Selected bounding box : 
+2021-11-30 17:01:03	INFO	imsubimage::ImageRegion::fromRecord+	    [3589, 7491, 0, 0] to [3720, 7622, 0, 0]  (21:48:05.187, -50.41.20.287, 943490740.7Hz, I to 21:47:34.759, -50.37.28.467, 943490740.7Hz, I)
+2021-11-30 17:01:03	INFO	imsubimage::ImageRegion::fromRecord	Creating image 'EMU_im_temp' of shape [132, 132]
+2021-11-30 17:01:03	INFO	imsubimage::ImageMaskAttacher::makeMask	Created mask `mask0'
+2021-11-30 17:01:03	INFO	imsubimage::::casa	Result imsubimage: True
+2021-11-30 17:01:03	INFO	imsubimage::::casa	Task imsubimage complete. Start time: 2021-11-30 17:01:02.596757 End time: 2021-11-30 17:01:02.660715
+2021-11-30 17:01:03	INFO	imsubimage::::casa	##### End Task: imsubimage           #####
+2021-11-30 17:01:03	INFO	imsubimage::::casa	##########################################
+2021-11-30 17:01:03	INFO	exportfits::::casa	##########################################
+2021-11-30 17:01:03	INFO	exportfits::::casa	##### Begin Task: exportfits         #####
+2021-11-30 17:01:03	INFO	exportfits::::casa	exportfits( imagename='EMU_im_temp', fitsimage='/Users/emma/Dropbox/Public/EMUZoo/2148-5039_EMU.fits', velocity=False, optical=False, bitpix=-32, minpix=0, maxpix=-1, overwrite=True, dropstokes=False, stokeslast=True, history=True, dropdeg=False )
+2021-11-30 17:01:03	INFO	exportfits::ImageFactory::toFITS	Applying mask of name 'mask0'
+2021-11-30 17:01:03	INFO	exportfits::::casa	Result exportfits: None
+2021-11-30 17:01:03	INFO	exportfits::::casa	Task exportfits complete. Start time: 2021-11-30 17:01:02.665238 End time: 2021-11-30 17:01:02.677600
+2021-11-30 17:01:03	INFO	exportfits::::casa	##### End Task: exportfits           #####
+2021-11-30 17:01:03	INFO	exportfits::::casa	##########################################
