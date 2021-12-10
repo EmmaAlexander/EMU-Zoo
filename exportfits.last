@@ -1,0 +1,13 @@
+imagename  = 'EMU_im_temp'
+fitsimage  = '/Users/emma/Dropbox/Public/EMUZoo/J202612-544728_EMU.fits'
+velocity   = False
+optical    = False
+bitpix     = -32
+minpix     = 0
+maxpix     = -1
+overwrite  = True
+dropstokes = False
+stokeslast = True
+history    = True
+dropdeg    = False
+#exportfits( imagename='EMU_im_temp',fitsimage='/Users/emma/Dropbox/Public/EMUZoo/J202612-544728_EMU.fits',velocity=False,optical=False,bitpix=-32,minpix=0,maxpix=-1,overwrite=True,dropstokes=False,stokeslast=True,history=True,dropdeg=False )

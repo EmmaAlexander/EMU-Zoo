@@ -1,0 +1,13 @@
+imagename = '/Volumes/TARDIS/Work/askap/fullfields/image.i.SB9351.cont.taylor.0.restored.fits'
+outfile   = 'EMU_im_temp'
+box       = ''
+region    = 'centerbox[[20h26m12.1925s,-54d47m28.4496s], [4arcmin, 4arcmin]]'
+chans     = ''
+stokes    = ''
+mask      = ''
+dropdeg   = True
+verbose   = True
+overwrite = True
+stretch   = False
+keepaxes  = []
+#imsubimage( imagename='/Volumes/TARDIS/Work/askap/fullfields/image.i.SB9351.cont.taylor.0.restored.fits',outfile='EMU_im_temp',box='',region='centerbox[[20h26m12.1925s,-54d47m28.4496s], [4arcmin, 4arcmin]]',chans='',stokes='',mask='',dropdeg=True,verbose=True,overwrite=True,stretch=False,keepaxes=[] )

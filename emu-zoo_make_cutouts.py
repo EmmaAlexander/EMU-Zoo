@@ -4,7 +4,7 @@ imdirectory='/Volumes/TARDIS/Work/askap/fullfields/'
 outdirectory='/Users/emma/Dropbox/Public/EMUZoo/'
 
 import numpy as np
-sources=np.loadtxt('emu-zoo_cutouts_sourcelist.txt',dtype='str')
+sources=np.loadtxt('SB_9351_viewcat.txt',dtype='str')
 for i in range(0,sources.shape[0]):
 	objectname=sources[i,0]
 	sourcecentre=sources[i,1]	

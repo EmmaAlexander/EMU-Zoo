@@ -11,9 +11,10 @@ from astropy.coordinates import SkyCoord
 import warnings
 warnings.filterwarnings('ignore')
 
+
 #read in the file with the sources
 #file format should be (1) Name (2) Centre coordinates (3) EMU SB (not needed for this code)
-sourcefile = 'emu-zoo_cutouts_sourcelist.txt'
+sourcefile = 'SB_9351_viewcat.txt'
 directory ='/Users/emma/Dropbox/Public/EMUZoo/'
 sources=np.loadtxt(sourcefile,dtype='str')
 
@@ -63,7 +64,8 @@ def main():
 
 		#get source coords and download image
 		coordsstr=sources[i,1]
-		coords = SkyCoord(coordsstr.replace(',', ''))   
+		coords = SkyCoord(coordsstr.replace(',', ''))  
+		print(coords) 
 
 		EMUSB=float(sources[i,2])
 
@@ -101,17 +103,25 @@ def main():
 		print("Making .png images for source") 
 
 		# background greyscale
-		greyscale_im=directory+src+'_WISE_3.4.fits'
-		greyscale_label='WISE'
-
+		greyscale_im=directory+src+'_DSS.fits'
+		greyscale_label='DSS'
 		greyscale_data,greyscale_header=fitsopen(greyscale_im)
 		wcs=WCS(greyscale_header)
 
-		#red contours
+		#radio contours
 		radio_im=directory+src+'_EMU.fits'
 		radio_label='EMU'
 		radio_data,radio_header=fitsopen(radio_im)
 		radio_wcs=WCS(radio_header)
+
+		#WISE contours
+		wise_im=directory+src+'_WISE_3.4.fits'
+		wise_label='WISE 3.4'
+		wise_data,wise_header=fitsopen(wise_im)
+		wise_wcs=WCS(wise_header)
+
+		centre=int(radio_data.shape[0]/2.)
+		rvmax=np.nanmax(radio_data[centre-20:centre+20,centre-20:centre+20])
 
 		contourexps=np.arange(start=0,stop=32,step=0.5)
 		contourmults=np.power(2,contourexps)
@@ -122,7 +132,8 @@ def main():
 
 		fig=plt.figure(dpi=400,figsize=(9,3))
 		ax1=plt.subplot(131,projection=wcs,adjustable='box')
-		ax1.imshow(radio_data,origin='lower',transform=ax1.get_transform(radio_wcs),cmap=infernocmap)
+		ax1.imshow(radio_data,origin='lower',transform=ax1.get_transform(radio_wcs),cmap=infernocmap,vmax=rvmax)
+		ax1.contour(radio_data, transform=ax1.get_transform(radio_wcs), colors='green',levels=radio_contours,linewidths=0.2)		
 		ax1.set_xlabel(' ')
 		ax1.set_ylabel(' ')
 
@@ -147,14 +158,9 @@ def main():
 
 
 		ax2=plt.subplot(132,projection=wcs,adjustable='box')
-		ax2.imshow(greyscale_data,origin='lower',cmap=plt.cm.gray_r,vmax=0.5*np.nanmax(greyscale_data))
+		ax2.imshow(greyscale_data,origin='lower',cmap=plt.cm.gray_r)
 		ax2.contour(radio_data, transform=ax2.get_transform(radio_wcs), colors='red',levels=radio_contours,linewidths=0.2)
-		
-		radio_alphas=np.divide(radio_data-basecont,np.nanmax(radio_data)-basecont)
-		radio_alphas=np.where(radio_alphas<0,0,radio_alphas)
-		redcmap=plt.cm.Reds
-		redcmap.set_bad('white',0)
-		ax2.imshow(radio_data,origin='lower',transform=ax2.get_transform(radio_wcs),cmap=redcmap,alpha=radio_alphas)
+
 
 		ax2.set_xlabel(' ')
 		ax2.set_ylabel(' ')
@@ -174,14 +180,17 @@ def main():
 			right=True,
 			labelbottom=False) 
 
-		ax2.set_title('EMU & WISE')
+		ax2.set_title('EMU & DSS')
 
 		ax2.set_xlim(0,greyscale_data.shape[0])
 		ax2.set_ylim(0,greyscale_data.shape[1])
 
 
 		ax3=plt.subplot(133,projection=wcs,adjustable='box')
-		ax3.imshow(greyscale_data,origin='lower',cmap=plt.cm.gray,vmax=0.5*np.nanmax(greyscale_data))
+		#ax3.imshow(greyscale_data,origin='lower',cmap=plt.cm.gray,vmax=0.5*np.nanmax(greyscale_data))
+		ax3.imshow(wise_data,transform=ax3.get_transform(wise_wcs),origin='lower',cmap=plt.cm.gray_r)
+		ax3.contour(radio_data, transform=ax3.get_transform(radio_wcs), colors='red',levels=radio_contours,linewidths=0.2)
+
 		ax3.set_xlabel(' ')
 		ax3.set_ylabel(' ')
 
@@ -199,9 +208,11 @@ def main():
 			left=True,
 			right=True,
 			labelbottom=False) 
+		ax3.set_xlim(0,greyscale_data.shape[0])
+		ax3.set_ylim(0,greyscale_data.shape[1])
 
-		ax3.set_title('WISE 3.4')
-
+		ax3.set_title('EMU & WISE 3.4')
+		plt.subplots_adjust(left=0.05, bottom=0.05, right=0.95, top=0.9, wspace=0.02, hspace=0.02)
 		plt.savefig(directory+src+'_overlay.png',dpi=400)
 if __name__ == "__main__":
 	main()
