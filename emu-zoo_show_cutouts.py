@@ -14,9 +14,10 @@ warnings.filterwarnings('ignore')
 
 #read in the file with the sources
 #file format should be (1) Name (2) Centre coordinates (3) EMU SB (not needed for this code)
-sourcefile = 'SB_9351_viewcat.txt'
-directory ='/Users/emma/Dropbox/Public/EMUZoo/'
-sources=np.loadtxt(sourcefile,dtype='str')
+sourcefile = 'SB_9351_multi.txt'
+directory ='/Volumes/TARDIS/Work/EMUzoo/SB9351/v1_multisrcs/'
+rdir='/Volumes/TARDIS/Work/EMUzoo/SB9351/cutouts/'
+sources=np.loadtxt(directory+sourcefile,dtype='str')
 
 plt.rcParams['mathtext.fontset'] = 'cm'
 plt.rcParams['font.family'] = 'cmu serif'
@@ -28,11 +29,9 @@ plt.rc('font', size=10)          # controls default text sizes
 # or use SkyView.list_surveys()
 # change these in and out as you wish
 # note that if a survey is not available for the coordinates you specify, then it will download an empty fits
-surveys= ['WISE 3.4','DSS','SUMSS 843 MHz','2MASS-J','GLEAM 170-231 MHz']
 
 # annoyingly, SkyView doesn't register the native pixel size of surveys, so need to specify
 # load in the file with these data from https://skyview.gsfc.nasa.gov/current/cgi/survey.pl
-survey_pix=np.loadtxt('survey_pix.txt',dtype='str')
 
 # alternatively, specify a common reolution you would like all the surveys to be sampled at
 # beware resampling errors... 
@@ -69,38 +68,7 @@ def main():
 
 		EMUSB=float(sources[i,2])
 
-		#loop over surveys
-		for j in range (0,len(surveys)):
-			survey=surveys[j]
-			survey_nospace=survey.replace(" ","_")
-
-			if commonpixscale==False:
-				#get the pixel scale of the survey
-				#otherwise will use the value already specified in the cell above
-				idx=np.where(survey_pix==survey_nospace)
-				try:
-					pixscale=float(survey_pix[idx[0][0],1])
-				except:
-					print("Error: no pixscale specified in file for {}".format(survey_nospace))
-					break
-
-			# make the image name
-			imagename=src+'_'+survey_nospace+'.fits'
-
-			n_pix=int(imsize/pixscale)
-
-			#only download if file doesn't already exist 
-			if (os.path.isfile(directory+imagename)==False) or (overwrite==True):
-				try:
-					url=SkyView.get_image_list(position=coords,survey=[survey],coordinates='J2000',projection='Sin',resolver='NED',pixels=n_pix,height=imsize*u.arcsec,width=imsize*u.arcsec)
-					os.system('curl -o '+directory+imagename+' '+url[0])
-					print("Downloaded {} image for source {}".format(survey,src))
-				except:
-					print("Survey {} not found in SkyView".format(survey))
-			else:
-				print("Not downloading {} image for source {}".format(survey,src)) 
-
-		print("Making .png images for source") 
+		print("Making .png images for sourcem {}".format(src)) 
 
 		# background greyscale
 		greyscale_im=directory+src+'_DSS.fits'
@@ -109,7 +77,7 @@ def main():
 		wcs=WCS(greyscale_header)
 
 		#radio contours
-		radio_im=directory+src+'_EMU.fits'
+		radio_im=rdir+src+'_SB9351.fits'
 		radio_label='EMU'
 		radio_data,radio_header=fitsopen(radio_im)
 		radio_wcs=WCS(radio_header)
@@ -213,6 +181,8 @@ def main():
 
 		ax3.set_title('EMU & WISE 3.4')
 		plt.subplots_adjust(left=0.05, bottom=0.05, right=0.95, top=0.9, wspace=0.02, hspace=0.02)
-		plt.savefig(directory+src+'_overlay.png',dpi=400)
+		plt.savefig(directory+src+'_overlay_labelled.png',dpi=400)
+
+
 if __name__ == "__main__":
 	main()
